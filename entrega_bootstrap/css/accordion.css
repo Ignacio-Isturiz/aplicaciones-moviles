@@ -1,0 +1,64 @@
+.accordion {
+    --bs-accordion-color: var(--text-primary);
+    --bs-accordion-btn-color: var(--text-primary);
+    --bs-accordion-btn-bg: transparent;
+    --bs-accordion-active-color: var(--accent-color);
+    --bs-accordion-active-bg: rgba(56, 189, 248, 0.1);
+    --bs-accordion-btn-focus-border-color: var(--accent-color);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
+}
+
+/* Basic Accordion - Card like appearance */
+.accordion:not(.accordion-flush) {
+    --bs-accordion-bg: var(--card-bg);
+    --bs-accordion-border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Flush Accordion - Integrated and minimal */
+.accordion.accordion-flush {
+    --bs-accordion-bg: transparent;
+    --bs-accordion-border-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 0;
+    backdrop-filter: none;
+}
+
+.accordion.accordion-flush .accordion-item {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+}
+
+.accordion-item {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-button {
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    box-shadow: none;
+}
+
+.accordion-button::after {
+    filter: invert(1);
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}

@@ -1,0 +1,107 @@
+<!-- 1. Acordeón Básico -->
+<section class="mb-5">
+    <h2 class="section-title">1. Acordeón Básico (Default)</h2>
+    <div class="example-card">
+        <p>El acordeón estándar permite alternar la visibilidad de bloques de contenido. Por defecto, solo
+            un elemento puede estar abierto a la vez.</p>
+
+        <div class="accordion" id="basicAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        ¿Qué es un Acordeón?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                    data-bs-parent="#basicAccordion">
+                    <div class="accordion-body">
+                        <strong>Estética Visual:</strong> Observa que este acordeón tiene una apariencia de
+                        <strong>tarjeta o caja contenedora</strong>. Tiene bordes definidos, esquinas
+                        redondeadas y una sombra elegante que lo separa del fondo.
+                        <br><br>
+                        <strong>Ejemplo Práctico:</strong> Ideal para una sección de <strong>Preguntas
+                            Frecuentes (FAQ)</strong> donde quieres que el contenido destaque como un bloque
+                        independiente.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 2. Acordeón Flush -->
+<section class="mb-5">
+    <h2 class="section-title">2. Acordeón "Flush"</h2>
+    <div class="example-card">
+        <p>La variante <code>.accordion-flush</code> elimina el color de fondo predeterminado, los bordes y
+            las esquinas redondeadas para integrarse mejor en contenedores de ancho completo.</p>
+
+        <div class="accordion accordion-flush" id="flushAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Diseño Minimalista
+                    </button>
+                </h2>
+                
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#flushAccordion">
+                    <div class="accordion-body">
+                        <strong>Estética Visual:</strong> A diferencia del básico, el Flush <strong>elimina
+                            los bordes exteriores y las esquinas redondeadas</strong>. Se siente mucho más
+                        plano y se "funde" con el fondo.
+                        <br><br>
+                        <strong>Ejemplo Práctico:</strong> Perfecto para <strong>menús laterales o
+                            dashboards</strong> donde quieres una lista de colapsables que parezca texto
+                        puro integrado en la interfaz, sin el ruido visual de bordes adicionales.
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- 3. Siempre Abiertos (Always Open) -->
+<section class="mb-5">
+    <h2 class="section-title">3. Paneles Independientes (Always Open)</h2>
+    <div class="example-card">
+        <p>Al omitir el atributo <code>data-bs-parent</code>, cada sección actúa de forma independiente,
+            permitiendo múltiples paneles abiertos simultáneamente.</p>
+
+        <div class="accordion" id="alwaysOpenAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="ao-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#ao-collapseOne" aria-expanded="true" aria-controls="ao-collapseOne">
+                        Multitarea y Comparación
+                    </button>
+                </h2>
+                <div id="ao-collapseOne" class="accordion-collapse collapse show" aria-labelledby="ao-headingOne">
+                    <div class="accordion-body">
+                        <strong>Función:</strong> Permite al usuario mantener varias secciones abiertas al
+                        mismo tiempo.
+                        <br><br>
+                        <strong>Ejemplo Práctico:</strong> Útil en <strong>listas de filtros de
+                            búsqueda</strong> (ej. Filtro por precio, marca y color en un e-commerce) donde
+                        el usuario necesita ver y ajustar varias categorías a la vez.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="ao-headingTwo">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#ao-collapseTwo" aria-expanded="true" aria-controls="ao-collapseTwo">
+                        Gestión de Secciones
+                    </button>
+                </h2>
+                <div id="ao-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="ao-headingTwo">
+                    <div class="accordion-body">
+                        En este caso, abrir el segundo panel no cerrará el primero. Esto se logra
+                        simplemente no especificando un padre común en el HTML.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

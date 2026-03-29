@@ -1,0 +1,26 @@
+/* Badge Custom Styles */
+.badge {
+    font-weight: 600;
+    padding: 0.5em 0.8em;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.01em;
+}
+
+.badge.bg-premium {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.rounded-pill {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+/* Enhancing positioned badges */
+.position-absolute.badge {
+    border: 2px solid var(--card-bg, #ffffff);
+}
+
+.btn .badge {
+    margin-left: 0.5rem;
+}

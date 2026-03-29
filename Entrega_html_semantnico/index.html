@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExploraLog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <h1>EXPLORALOG</h1>
+    <time id="reloj">Cargando cronómetro...</time>
+  </header>
+
+  <nav>
+    Traza tu camino · Documenta tu aventura
+  </nav>
+
+  <main>
+    <section id="feed">
+      <div class="panel">
+        <h3>Nueva Entrada</h3>
+        <input type="text" id="entry-title" placeholder="Título de la aventura...">
+        <textarea id="entry-text" rows="3" placeholder="¿Qué descubriste hoy?"></textarea>
+        <div id="location-status" class="entry-meta">Sin ubicación detectada</div>
+        <button id="btn-save" onclick="guardarEntrada()">Publicar Log</button>
+      </div>
+
+      <div id="logs-container">
+      </div>
+    </section>
+
+    <aside>
+      <div class="panel">
+        <h3>📍 Ubicación Actual</h3>
+        <div id="ubicacion" class="entry-meta">Pulsa para geolocalizar</div>
+        <button onclick="obtenerUbicacion()">Actualizar Radar</button>
+        <div id="map-container">
+          <iframe id="mapa" loading="lazy"></iframe>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>📁 Importar Datos</h3>
+        <input type="file" id="archivo" accept=".txt">
+        <p class="entry-meta" id="file-info">Solo archivos .txt</p>
+      </div>
+
+      <div class="panel">
+        <h3>🎬 Inspiración</h3>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/3nYLTiY5skU?si=NVnc7bvb5zt37igw"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+          style="border-radius: 8px; margin-bottom: 1rem;"></iframe>
+
+        <p class="entry-meta">Ambiente Forestal:</p>
+        <audio controls style="width: 100%;">
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    ExploraLog © 2026 | Estado: <span id="estado">Iniciando...</span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/reloj.js"></script>
+  <script src="js/mouse.js"></script>
+  <script src="js/geo.js"></script>
+  <script src="js/conexion.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/archivo.js"></script>
+
+</body>
+
+</html>

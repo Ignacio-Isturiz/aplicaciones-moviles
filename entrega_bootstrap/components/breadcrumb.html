@@ -1,0 +1,62 @@
+<section class="breadcrumb-container" id="breadcrumb-section">
+    <div class="breadcrumb-section-title">
+        <i class="bi bi-map-fill"></i>
+        <span>Navegación / Breadcrumbs</span>
+    </div>
+
+    <div class="breadcrumb-example-group">
+        <!-- Basic Example -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page">Inicio</li>
+            </ol>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Biblioteca</li>
+            </ol>
+        </nav>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#">Biblioteca</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Datos</li>
+            </ol>
+        </nav>
+
+        <hr class="opacity-10 my-4">
+
+        <!-- Custom Separator -->
+        <div class="mb-2 text-secondary small">Custom Separator (/)</div>
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#">Biblioteca</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Datos</li>
+            </ol>
+        </nav>
+
+        <nav class="breadcrumb-custom" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+            </ol>
+        </nav>
+
+        <hr class="opacity-10 my-4">
+
+        <!-- With Icons -->
+        <div class="mb-2 text-secondary small">With Icons</div>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-glass">
+                <li class="breadcrumb-item"><a href="#"><i class="bi bi-house-door-fill me-1"></i>Home</a></li>
+                <li class="breadcrumb-item"><a href="#"><i class="bi bi-folder-fill me-1"></i>Library</a></li>
+                <li class="breadcrumb-item active" aria-current="page"><i
+                        class="bi bi-file-earmark-text-fill me-1"></i>Current Page</li>
+            </ol>
+        </nav>
+    </div>
+</section>
